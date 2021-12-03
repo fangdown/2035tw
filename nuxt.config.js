@@ -41,7 +41,10 @@ export default {
     
   ],
   router: {
-    base: './'
+    mode: 'hash',
+    base: process.env.NODE_ENV === 'production' ? '/tw/' : '',
+    resourceHints: false,
+    prefetchLinks: false  // 解决首屏加载全部js
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
