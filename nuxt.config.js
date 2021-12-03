@@ -40,7 +40,9 @@ export default {
   modules: [
     
   ],
-
+  router: {
+    base: './'
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     publicPath: '/nuxt/',
