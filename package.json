@@ -9,12 +9,16 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/style-resources": "^1.2.1",
     "ant-design-vue": "^1.7.6",
     "core-js": "^3.15.1",
-    "nuxt": "^2.15.7"
+    "less-loader": "^5.0.0",
+    "nuxt": "^2.15.7",
+    "vue-fullpage.js": "^0.1.7"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.7",
-    "@nuxt/typescript-build": "^2.1.0"
+    "@nuxt/typescript-build": "^2.1.0",
+    "less": "^4.1.2"
   }
 }

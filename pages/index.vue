@@ -1,7 +1,9 @@
 <template>
   <div class="root">
-    <Time />
+    <!-- <Time /> -->
     <!-- <Icp />  -->
+    <!-- <Fullpage /> -->
+    <Earth />
   </div>
 </template>
 <style>
@@ -9,12 +11,13 @@ html,
 body,
 #__nuxt,
 #__layout,
-#__layout,.root {
+#__layout,
+.root {
   height: 100%;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
-.root{
+.root {
   position: relative;
 }
 </style>

@@ -20,6 +20,12 @@
     background: url('http://img1.qunarzz.com/wugc/p129/201204/20/591bfad63bfb82a193835fbb.jpg_r_1024x683x95_5eec1eb6.jpg') no-repeat ;
     background-size: cover;
   }
+  .bgtw{
+    width: 100%;
+    height: 100%;
+    background: url('https://wx3.sinaimg.cn/large/00612INDgy1guwo0s17iaj60u00mi79002.jpg') no-repeat ;
+    background-size: cover;
+  }
   
   .content{
     height: 100%;
