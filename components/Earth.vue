@@ -45,6 +45,11 @@ export default {
       loading: true,
       list: [
         {
+          date: "2021-12-04",
+          title: "布林肯竟称台湾为“国家”，人民日报钟声驳斥",
+          link: "https://www.toutiao.com/a7037817273007997477/?channel=&source=search_tab",
+        },
+        {
           date: "2021-12-03",
           title: "12月3日，爱尔兰支持“台独”；立反华是求财？印度介入台湾问题",
           link: "https://www.toutiao.com/a7037301113183306276/?channel=&source=search_tab",
