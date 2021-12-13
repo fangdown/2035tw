@@ -8,7 +8,7 @@ module.exports = {
       args: 'start',
       env: {
         // 环境参数，当前指定为生产环境 process.env.NODE_ENV
-        PORT: 12000,
+        PORT: 15000,
         NODE_ENV: 'production',
       },
     }
