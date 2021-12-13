@@ -43,38 +43,21 @@ export default {
   data() {
     return {
       loading: true,
-      list: [
-        {
-          date: "2021-12-04",
-          title: "布林肯竟称台湾为“国家”，人民日报钟声驳斥",
-          link: "https://www.toutiao.com/a7037817273007997477/?channel=&source=search_tab",
-        },
-        {
-          date: "2021-12-03",
-          title: "12月3日，爱尔兰支持“台独”；立反华是求财？印度介入台湾问题",
-          link: "https://www.toutiao.com/a7037301113183306276/?channel=&source=search_tab",
-        },
-        {
-          date: "2021-12-02",
-          title: "郁慕明：惩戒“台独”顽固分子的措施早就该出来",
-          link: "https://www.toutiao.com/a7037055494049137160/?channel=&source=search_tab",
-        },
-        {
-          date: "2021-12-01",
-          title: "12月1日，解放军核潜艇现身台海；安倍叫嚣台湾问题是日本家务事",
-          link: "https://www.toutiao.com/a7036667398346326532/?channel=&source=search_tab",
-        },
-      ],
+      list: [],
     };
   },
   mounted() {
-    // const earthEle = document.getElementById('earthmv')
-    // earthEle.play()
-    setTimeout(() => {
-      this.loading = false;
-    }, 1000);
+    this.getList();
   },
-  methods: {},
+  methods: {
+    getList() {
+      this.$axios.get("/api/tw/list?page=1").then((res) => {
+        const { rows = [] } = res?.data?.data || {};
+        this.list = rows;
+        this.loading = false;
+      });
+    },
+  },
 };
 </script>
 <style lang="less" scoped>

@@ -38,8 +38,24 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    
+    '@nuxtjs/axios'
   ],
+  axios: {
+    baseURL: 'http://api.git123.cn',
+    proxy: true,
+    // prefix: '/api/',
+    credentials: true
+    // See https://github.com/nuxt-community/axios-module#options
+    },
+    proxy: {
+    '/api/': {
+      target: 'http://localhost:11000',//这个网站是开源的可以请求到数据的
+      pathRewrite: {
+        '^/api/': '/',
+        changeOrigin: true
+      }
+    }
+  },
   router: {
     mode: 'hash',
     base: process.env.NODE_ENV === 'production' ? '/tw/' : '',
