@@ -58,7 +58,7 @@ export default {
   },
   router: {
     mode: 'hash',
-    base: process.env.NODE_ENV === 'production' ? '/tw/' : '',
+    base: process.env.NODE_ENV === 'production' ? '' : '',
     resourceHints: false,
     prefetchLinks: false  // 解决首屏加载全部js
   },
