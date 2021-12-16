@@ -7,11 +7,8 @@ COPY package*.json ./
 
 RUN npm install
 
-# 全局安装pm2模块
-RUN npm install pm2 -g
-
-
+EXPOSE 3000
 COPY . .
 RUN npm run build
 
-CMD [ "pm2-runtime","start","ecosystem.config.js"]
+CMD ["npm","start"]

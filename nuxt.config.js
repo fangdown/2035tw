@@ -24,7 +24,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/antd-ui'
+    '@/plugins/antd-ui',
+    // '@/plugins/axios'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -40,16 +41,18 @@ export default {
   modules: [
     '@nuxtjs/axios'
   ],
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:11000'
+  },
   axios: {
-    baseURL: 'http://api.git123.cn',
     proxy: true,
-    // prefix: '/api/',
+    prefix: '/api/',
     credentials: true
     // See https://github.com/nuxt-community/axios-module#options
     },
     proxy: {
     '/api/': {
-      target: 'http://localhost:11000',//这个网站是开源的可以请求到数据的
+      target: process.env.BASE_URL,
       pathRewrite: {
         '^/api/': '/',
         changeOrigin: true

@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     getList() {
-      this.$axios.get("/api/tw/list?page=1").then((res) => {
+      this.$axios.get("/tw/list?page=1").then((res) => {
         const { rows = [] } = res?.data?.data || {};
         this.list = rows;
         this.loading = false;
